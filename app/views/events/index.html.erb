@@ -1,4 +1,9 @@
 <div class="container">
 	<h1> Events </h1>
+	<ul>
+	<% @events.each do |event| %>
+	<li><%= link_to(event.title,event) %></li>
 
+	<% end %>
+</ul>
 </div>

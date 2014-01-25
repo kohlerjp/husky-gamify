@@ -29,7 +29,7 @@ class EventsController < ApplicationController
 
 	def show
 		@event = Event.find(params[:id])
-		@attending = Attending.new
+		
 	end
 
 	private

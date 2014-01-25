@@ -6,8 +6,17 @@
 
 
 	<%= form_for(@event.attendings.build) do |f| %>
+	<%= hidden_field_tag 'event_id',@event.id  %>
 	<%= f.submit "Join In", class: "btn btn-large btn-primary btn-signup" %>
 
+</div>
+<div class="container">
+	<ul>
+		<% @event.users.each do |user| %>
+			<li><%= link_to(cap_name(user),user) %></li>
+		<% end %>
+	</ul>
 
 	<% end %>
-</div>
+
+	</div>

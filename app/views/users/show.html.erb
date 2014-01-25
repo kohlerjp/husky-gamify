@@ -27,4 +27,14 @@
 			</div>
 		<% end %> 
 	<% end %>
+
+	<h2>Events</h2>
+	<ul>
+	<% @user.events.each do |event| %>
+	<li><%= link_to(event.title,event) %></li>
+
+	<% end %>
+	</ul>
+
+
 </div>
