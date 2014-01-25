@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+	default_scope -> { order('points DESC') }
+
 	before_save { self.name = name.downcase }
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token

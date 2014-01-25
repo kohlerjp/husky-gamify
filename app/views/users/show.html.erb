@@ -19,5 +19,12 @@
 			<li>Super Power: <%=@user.profile.power %></li>
 			<% end %> 
 		</ul>
+
+		<% if @user.profile.aboutme %>
+			<div class="container">
+				<h2>About Me</h2>
+				<p><%= @user.profile.aboutme %></p>
+			</div>
+		<% end %> 
 	<% end %>
 </div>

@@ -1,0 +1,13 @@
+<ul>
+<% @users.each do |user| %>
+	<li>
+		<div class="student">
+			<%= cap_name(user) %>
+			<%= user.points %>
+
+		</div>
+	</li>
+
+<% end %>
+
+</ul>
