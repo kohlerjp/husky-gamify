@@ -1,0 +1,35 @@
+<% provide(:title,"Update Profile") %>
+<div class="container">
+<h1 class="text-center"> Create Your Profile </h2>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@user.build_profile,url: {action: "create"}) do |f| %>
+        <%= f.label :age %>
+        <%= number_field_tag(:age) %>
+
+        <%= f.label :school %>
+        <%= select_tag(:school, options_for_select([['College of Computer and Information Science',"College of Computer and Information Science"],
+          ['College of Arts, Media & Design','College of Arts, Media & Design'],
+          ['D\'Amore-McKim School of Business','D\'Amore-McKim School of Business'],
+          ['College of Engineering','College of Engineering'],
+          ['Bouvé College of Health Sciences','Bouvé College of Health Sciences'],
+          ['School of Law','School of Law'],
+          ['College of Professional Studies','College of Professional Studies'],
+          ['College of Science','College of Science'],
+          ['College of Social Sciences and Humanities','College of Social Sciences and Humanities'],
+          ['Program for Undeclared Students','Program for Undeclared Students']
+        ])) %>
+
+        <%= radio_button_tag(:power, "Invisibility") %>
+        <%= label_tag(:power, "Invisibility") %>
+        <%= radio_button_tag(:power, "Flight") %>
+        <%= label_tag(:power, "Flight") %>
+
+        <%= f.submit "Create my profile", class: "btn btn-large btn-primary btn-signup" %>
+      <% end %>
+       <%= link_to("I'll do this later",current_user) %>
+    </div>
+  </div>
+
+</div>
+

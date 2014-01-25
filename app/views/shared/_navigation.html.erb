@@ -7,7 +7,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%= link_to('Brand Name',root_url,class:"navbar-brand") %>
+    <%= link_to('Join In',root_url,class:"navbar-brand") %>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,8 +18,8 @@
       <% else %>
         <li><%= link_to('Login',login_path) %></li>
       <% end %>
-        <li><a href="#">About</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><%= link_to('About',about_path) %></li>
+        <li><%= link_to('FAQ',faq_path) %></li>
         <% if signed_in? %>
           <li><%= link_to('Logout',logout_path,method: :delete) %></li>
         <% else %>

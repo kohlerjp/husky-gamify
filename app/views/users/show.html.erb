@@ -5,4 +5,19 @@
 		<%= cap_name(@user) %>
 	</h1>
 	<h2><%= pluralize(@user.points,'point') %></h2>
+	<% if @user.profile %>
+		<ul>
+			<% if @user.profile.age %>
+			<li>Age: <%=@user.profile.age %></li>
+			<% end %> 
+
+			<% if @user.profile.school %>
+			<li>School: <%=@user.profile.school %></li>
+			<% end %> 
+
+			<% if @user.profile.power %>
+			<li>Super Power: <%=@user.profile.power %></li>
+			<% end %> 
+		</ul>
+	<% end %>
 </div>
