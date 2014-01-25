@@ -1,7 +1,8 @@
+<% provide(:title, cap_name(@user) )%>
 <div class="container">
 	<h1>
 		<%= gravatar_for(@user) %>
-		<%= @user.name.capitalize %>
+		<%= cap_name(@user) %>
 	</h1>
 	<h2><%= pluralize(@user.points,'point') %></h2>
 </div>

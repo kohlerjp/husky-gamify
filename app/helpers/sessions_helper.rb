@@ -30,4 +30,8 @@ module SessionsHelper
 	def signed_in_user
 		redirect_to(current_user) if signed_in?
 	end
+
+	def cap_name(user)
+		return user.name.split.map(&:capitalize).join(' ')
+	end
 end
