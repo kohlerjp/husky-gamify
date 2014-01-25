@@ -1,4 +1,9 @@
 HuskyGamify::Application.routes.draw do
+  get "generic_pages/home"
+  get "generic_pages/about"
+  get "generic_pages/faq"
+
+  root 'generic_pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

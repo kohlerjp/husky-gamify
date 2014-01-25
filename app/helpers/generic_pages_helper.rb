@@ -1,0 +1,2 @@
+module GenericPagesHelper
+end
