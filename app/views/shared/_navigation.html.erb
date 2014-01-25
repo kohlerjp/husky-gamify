@@ -13,10 +13,18 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Login</a></li>
+      <% if signed_in? %>
+        <li><%= link_to('Profile',current_user) %></li>
+      <% else %>
+        <li><%= link_to('Login',login_path) %></li>
+      <% end %>
         <li><a href="#">About</a></li>
         <li><a href="#">FAQ</a></li>
-        <li><a href="#">Register</a></li>
+        <% if signed_in? %>
+          <li><%= link_to('Logout',logout_path,method: :delete) %></li>
+        <% else %>
+          <li><%= link_to('Register',register_path) %></li>
+        <% end %>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
