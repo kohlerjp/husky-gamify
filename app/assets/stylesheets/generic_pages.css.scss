@@ -1,3 +1,23 @@
 // Place all the styles related to the GenericPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.splash{
+   position:absolute;
+background: url(image_path('homepage.jpg')) no-repeat center center fixed;
+background-size: cover;
+height: 100%;
+width: 100%;
+
+
+}
+
+
+.navbar{
+	
+}
+
+.home-buttons{
+	position: relative;
+	top: 50%;
+	left: 50%;
+}

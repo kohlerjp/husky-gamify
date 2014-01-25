@@ -3,6 +3,7 @@
 /* Body styling */
 body{
   padding-top: 50px;
+
 }
 .navbar-right{
   padding-right: 20px;
@@ -12,7 +13,6 @@ body{
   background: url('http://i.imgur.com/bhTXbGG.jpg?1') ;
   background-repeat: no-repeat;
   color: white;
-
 }
 
 /* Forms and whatnot */
@@ -61,4 +61,7 @@ input {
   li{
     padding-top: 10px;
   }
+}
+.pad-bottom{
+  padding-bottom: 30px;
 }

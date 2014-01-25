@@ -1,6 +1,6 @@
 module ApplicationHelper
 	def full_title(page_title)
-	    base_title = "Brand Name"  
+	    base_title = "Join In"  
 	    if page_title.empty?                              
 	      base_title
 	    else                                      

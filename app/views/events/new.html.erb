@@ -1,0 +1,30 @@
+<% provide(:title,"New Event") %>
+<div class="container pad-bottom">
+<h1 class="text-center"> New Event </h2>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@event) do |f| %>
+        <%= f.label :title %>
+        <%= f.text_field :title, autofocus:"1" %>
+
+        <%= f.label :points %>
+        <%= f.text_field :points %>
+
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+
+        <%= f.label :start_time %>
+        <%= date_select :start_date, :event %>
+
+        <%= f.label :end_time %>
+        <%= date_select :end_date, :event %>
+
+        <%= f.submit "Create event", class: "btn btn-large btn-primary btn-signup" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

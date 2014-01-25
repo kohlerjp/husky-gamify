@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 	default_scope -> { order('points DESC') }
+	has_many :attendings
+	has_many :events, through: :attendings
 
 	before_save { self.name = name.downcase }
 	before_save { self.email = email.downcase }

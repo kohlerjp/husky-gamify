@@ -1,0 +1,13 @@
+<div class= "container">
+	<h1><%= @event.title %></h1>
+	<p> Description: <%= @event.description %></p>
+	<p> Location: <%= @event.location %></p>
+	<p> <%= pluralize(@event.points,'point') %></p>
+
+
+	<%= form_for(@event.attendings.build) do |f| %>
+	<%= f.submit "Join In", class: "btn btn-large btn-primary btn-signup" %>
+
+
+	<% end %>
+</div>

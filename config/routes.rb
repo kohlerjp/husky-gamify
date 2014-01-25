@@ -13,6 +13,7 @@ HuskyGamify::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :user_profile
   resources :events
+  resources :attendings
 
   match '/register', to:'users#new', via:'get'
   match '/login',to:'sessions#new',  via:'get'
