@@ -1,9 +1,13 @@
 HuskyGamify::Application.routes.draw do
+  get "users/new"
+  get "users/show"
   get "generic_pages/home"
   get "generic_pages/about"
   get "generic_pages/faq"
 
   root 'generic_pages#home'
+  resources :users
+  match '/register', to:'users#new', via:'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
