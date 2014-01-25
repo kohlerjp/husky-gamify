@@ -12,6 +12,7 @@ HuskyGamify::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :user_profile
+  resources :events
 
   match '/register', to:'users#new', via:'get'
   match '/login',to:'sessions#new',  via:'get'
@@ -19,6 +20,7 @@ HuskyGamify::Application.routes.draw do
   match '/about', to:'generic_pages#about', via:'get'
   match '/faq', to:'generic_pages#faq', via:'get'
   match '/create_profile', to:'user_profile#new', via:'get'
+  match '/events', to: 'events#index', via:'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

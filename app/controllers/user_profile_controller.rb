@@ -19,7 +19,7 @@ class UserProfileController < ApplicationController
 
   private
   	def profile_params
-  		return params.permit(:age,:school,:power,:aboutme,),
+  		return params.permit(:age,:school,:power,:aboutme)
   	end
 
 end

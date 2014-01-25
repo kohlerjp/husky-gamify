@@ -53,3 +53,12 @@ input {
 .aboutme{
   height:100px;
 }
+.students{
+  list-style: none;
+  border-top-width: 1px;
+  border-color: gray;
+  border-bottom-width: 1px;
+  li{
+    padding-top: 10px;
+  }
+}
