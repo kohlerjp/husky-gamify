@@ -7,15 +7,11 @@
 	<p> <%= pluralize(@event.points,'point') %></p>
 	
 
-	<% if in_event?(current_user,@event) %>
-	<strong>You are going</strong>
-	<% else %>
 
 	<%= form_for(@event.attendings.build) do |f| %>
 	<%= hidden_field_tag 'event_id',@event.id  %>
 	<%= f.submit "Join In", class: "btn btn-large btn-primary btn-signup" %>
-	
-	<% end %>
+		<% end %>
 
 </div>
 <div class="col-md-6 myborder-left">
@@ -29,7 +25,7 @@
 		<% end %>
 	</ul>
 
-	<% end %>
+
 
 	</div>
 
