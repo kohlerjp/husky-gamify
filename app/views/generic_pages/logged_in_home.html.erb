@@ -5,7 +5,7 @@ body{
 </style>
 <div class="container-fluid">
 	<div class="jumbotron">
-
+    <h1>You have <br/> <%= pluralize(current_user.points,'mark') %></h1>
 	</div>
 
 <div class="row">
@@ -23,25 +23,36 @@ body{
 
   		</ul>
   	</div>
-  	<div class="just-in in-profile">
-  		<span class="heading">just in </span>
-  		<li>Jack Donalds is attending Frozen Fenway</li>
-  		<li>John Smith is attending The Husky Hunt</li>
-  	</div>
+
   </div>
   <div class="col-md-4 feed">
-  	Feed
+  	<%= form_for(@micropost) do |f| %>
+      <%= f.text_field :content, placeholder:'Say Something About an Event' %>
+      <%= f.submit "Post", class: "post-btn btn btn-primary" %>
+    <% end %>
+    <div class="post-feed">
+      <ul class="post-feed-list">
+        <% @posts.each do |post| %>
+          <li>
+            <%= gravatar_for(post.user,40) %>
+            <span class="more-space">
+            <%= post.content %> <small><%= time_ago_in_words(post.created_at) %> ago.</small>
+          </span>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
   <div class="col-md-4 popular">
-  	<div class="pop-events">
-  		<p>Will the huskies take one more game during their all time best season?
-  		<strong>Frozen Fenway</strong> </p>
 
-  		<p>
-  			Watch the Huskies take on Boston University during the first basketball game 
-  			of the new year. <strong>NEU vs BU Basketball</strong>
-  		</p>
-  	</div>
+    <ul class="event-feed">
+    <% @events.each do |event| %>
+    <li>
+      <%= event.description %> <%= link_to(event.title,event) %></strong>
+    </li>
+
+    <% end %>
+  </ul>
   </div>
 </div>
 

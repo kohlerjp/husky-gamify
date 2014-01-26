@@ -1,8 +1,11 @@
 <div class= "container">
+	<div class="row">
+		<div class="col-md-6">
 	<h1><%= @event.title %></h1>
-	<p> Description: <%= @event.description %></p>
-	<p> Location: <%= @event.location %></p>
+	<p><%= @event.description %></p>
+	<p> <%= @event.location %></p>
 	<p> <%= pluralize(@event.points,'point') %></p>
+	
 
 
 	<%= form_for(@event.attendings.build) do |f| %>
@@ -10,13 +13,19 @@
 	<%= f.submit "Join In", class: "btn btn-large btn-primary btn-signup" %>
 
 </div>
-<div class="container">
-	<ul>
+<div class="col-md-6 myborder-left">
+	<ul class="eventsUsers">
 		<% @event.users.each do |user| %>
-			<li><%= link_to(cap_name(user),user) %></li>
+			<li>
+				<%= gravatar_for(user,75) %>
+				<%= link_to(cap_name(user),user) %> | <small><%= user.points %></small>
+
+			</li>
 		<% end %>
 	</ul>
 
 	<% end %>
 
 	</div>
+
+</div>

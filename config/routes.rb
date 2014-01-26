@@ -14,6 +14,7 @@ HuskyGamify::Application.routes.draw do
   resources :user_profile
   resources :events
   resources :attendings
+  resources :microposts
 
   match '/register', to:'users#new', via:'get'
   match '/login',to:'sessions#new',  via:'get'

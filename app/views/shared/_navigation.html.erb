@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -7,21 +8,24 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
+     <% if signed_in? %>
     <%= link_to('Join In',feed_url,class:"navbar-brand white") %>
+    <% else %>
+      <%= link_to('Join In',root_url,class:"navbar-brand white") %>
+      <% end %>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse white" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right white">
       <% if signed_in? %>
-        <li class=><%= link_to(cap_name(current_user),current_user) %></li>
+        <li><%= link_to(cap_name(current_user),current_user) %></li>
         <li><%= link_to('Events', events_path) %></li>
         <li><%= link_to('Leader Board', users_path) %></li>
       <% else %>
         <li><%= link_to('Login',login_path) %></li>
       <% end %>
         <li><%= link_to('About',about_path) %></li>
-        <li><%= link_to('FAQ',faq_path) %></li>
         <% if signed_in? %>
           <li><%= link_to('Logout',logout_path,method: :delete) %></li>
         <% else %>

@@ -1,39 +1,58 @@
 <% provide(:title, cap_name(@user) )%>
 <div class="container">
-	<h1>
-		<%= gravatar_for(@user) %>
-		<%= cap_name(@user) %>
-	</h1>
-	<h2><%= pluralize(@user.points,'point') %></h2>
-	<% if @user.profile %>
-		<ul>
-			<% if @user.profile.yog %>
-			<li>Graduates: <%=@user.profile.yog %></li>
-			<% end %> 
+		<div class="row">
+			<div class="col-md-6">
+			<h1>
+				<%= gravatar_for(@user) %>
+				<%= cap_name(@user) %>
+			</h1>
+			<div class="profileDiv">
+			<h2> Profile </h2>
+				<h4><%= pluralize(@user.points,'point') %></h4>
+			<% if @user.profile %>
+				<ul class="profList">
+					<% if @user.profile.yog %>
+					<li>Graduates: <%=@user.profile.yog %></li>
+					<% end %> 
 
-			<% if @user.profile.school %>
-			<li>School: <%=@user.profile.school %></li>
-			<% end %> 
+					<% if @user.profile.school %>
+					<li>School: <%=@user.profile.school %></li>
+					<% end %> 
 
-			<% if @user.profile.power %>
-			<li>Super Power: <%=@user.profile.power %></li>
-			<% end %> 
+					<% if @user.profile.power %>
+					<li>Super Power: <%=@user.profile.power %></li>
+					<% end %> 
 
-			<% if @user.profile.favsport %>
-			<li>Favorite Sport: <%=@user.profile.favsport %></li>
+					<% if @user.profile.favsport %>
+					<li>Favorite Sport: <%=@user.profile.favsport %></li>
+					<% end %>
+				</ul>
+
+
 			<% end %>
-		</ul>
+		</div>
+		</div>
+			</ul>
 
+			<div class="col-md-6 myborder-left user-eventDiv">
 
-	<% end %>
-
-	<h2>Events</h2>
-	<ul>
+							<h2>Events</h2>
+			<ul>
+	<ul class="events-list user-events-list">
 	<% @user.events.each do |event| %>
-	<li><%= link_to(event.title,event) %></li>
+	<li>
+		<h3>
+		<%= link_to(event.title,event,class: 'dark-link') %>
+		<br/>
+		<small><%= event.description %></small>
+		<br/>
+		<small>Starting in <%=  time_ago_in_words(event.start_time) %></small>
+		</h3>
+	</li> 
 
 	<% end %>
-	</ul>
 
+			</div>
+	</div>
 
 </div>

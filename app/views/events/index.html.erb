@@ -1,8 +1,16 @@
 <div class="container">
-	<h1> Events </h1>
-	<ul>
+	<h1> Upcoming Events </h1>
+	<ul class="events-list">
 	<% @events.each do |event| %>
-	<li><%= link_to(event.title,event) %></li>
+	<li>
+		<h3>
+		<%= link_to(event.title,event,class: 'dark-link') %>
+		<br/>
+		<small><%= event.description %></small>
+		<br/>
+		<small>Starting in <%=  time_ago_in_words(event.start_time) %></small>
+		</h3>
+	</li> 
 
 	<% end %>
 </ul>

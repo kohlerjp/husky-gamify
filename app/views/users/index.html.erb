@@ -1,9 +1,9 @@
-<ul class='students'>
+<ol class='students'>
 <% @users.each do |user| %>
 	<li>
 		<div>
-			<%= gravatar_for user %>
-			<%= cap_name(user) %>
+			<%= gravatar_for user,80 %>
+			<%= link_to(cap_name(user),user,class: 'black-text') %>
 			<strong> <%= user.points %> </strong>
 
 		</div>
