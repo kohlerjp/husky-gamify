@@ -34,4 +34,19 @@ module SessionsHelper
 	def cap_name(user)
 		return user.name.split.map(&:capitalize).join(' ')
 	end
+	def in_event?(user,event)
+		user_id = user.id
+		event_id = event.id
+
+		user.events.each do |e|
+			if e.id == event.id
+				return true
+			else
+				return false
+			end
+		end
+	end
 end
+
+
+

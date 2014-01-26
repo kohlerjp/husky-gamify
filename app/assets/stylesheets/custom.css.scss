@@ -13,6 +13,10 @@ body{
 }
 
 .jumbotron{
+
+
+}
+.myjumbotron{
 background: url('http://i.imgur.com/PyJhE9E.jpg') ;
 height: 450px;
 margin-bottom: 0px;
@@ -20,6 +24,12 @@ width: 100%;
 color: white;
 padding-top: 173px;
 padding-left: 122px;
+
+
+}
+.aboutjumbotron{
+
+
 
 }
 
@@ -238,4 +248,8 @@ li{
 }
 .more-space{
   padding-left: 4px;
+}
+.team-photo{
+  height: 100%;
+  width: 100%
 }
