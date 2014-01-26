@@ -13,7 +13,7 @@ class GenericPagesController < ApplicationController
   def logged_in_home
     @events = Event.where('id > 0',limit:4)
     @micropost = current_user.microposts.build
-    @posts = Micropost.where('id > 0',limit:4)
+    @posts = Micropost.limit(4).where('id > 0')
   	
   end
 end
