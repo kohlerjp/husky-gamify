@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-	default_scope -> { order('start_time DESC') }
+	default_scope -> { order('start_time ASC') }
 	has_many :attendings
 	has_many :users, through: :attendings
 
