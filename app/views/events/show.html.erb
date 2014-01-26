@@ -7,7 +7,7 @@
 	<p> <%= pluralize(@event.points,'point') %></p>
 	
 
-
+	
 	<%= form_for(@event.attendings.build) do |f| %>
 	<%= hidden_field_tag 'event_id',@event.id  %>
 	<%= f.submit "Join In", class: "btn btn-large btn-primary btn-signup" %>
