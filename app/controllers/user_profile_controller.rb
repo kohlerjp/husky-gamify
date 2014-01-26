@@ -7,7 +7,7 @@ class UserProfileController < ApplicationController
   def create
   	@profile = current_user.build_profile(profile_params)
   	if @profile.save
-  		redirect_to current_user
+  		redirect_to feed_path
   	else
   		flash[:danger] = 'There was a problem creating your profile'
   		render 'new'
@@ -19,7 +19,7 @@ class UserProfileController < ApplicationController
 
   private
   	def profile_params
-  		return params.permit(:age,:school,:power,:aboutme)
+  		return params.permit(:school,:power,:yog,:favsport)
   	end
 
 end

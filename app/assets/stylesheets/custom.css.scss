@@ -5,14 +5,22 @@ body{
   padding-top: 50px;
 
 }
+.navbar{
+  background-color: #009445;
+  border-color: #009445;
+  color: white !important;
+}
+
 .navbar-right{
   padding-right: 20px;
 }
 
 .jumbotron{
-  background: url('http://i.imgur.com/bhTXbGG.jpg?1') ;
-  background-repeat: no-repeat;
-  color: white;
+background: url('http://i.imgur.com/PyJhE9E.jpg') ;
+height: 450px;
+margin-bottom: 0px;
+width: 100%;
+
 }
 
 /* Forms and whatnot */
@@ -64,4 +72,68 @@ input {
 }
 .pad-bottom{
   padding-bottom: 30px;
+}.white{
+  color: white !important;
 }
+.navbar-inverse .navbar-nav > li > a {
+color: white;
+border-left: 1px solid rgb(189, 189, 189);
+
+}
+.profile-column{
+background-color: #18a34d;
+height: 400px;
+padding-top: 15px;
+
+}
+.feed{
+background-color: #3db26a;
+height: 400px;
+
+}
+.popular{
+background-color: #18a34d;
+  height: 400px;
+
+}
+.in-profile{
+  background-color: #26673f;
+  width:75%;
+  padding-top: 15px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  color: white;
+  .heading{
+    padding-left: 20px;
+    font-size: 28px;
+  }
+}
+.just-in{
+  padding-bottom: 30px;
+}
+.pop-events{
+background-color: #26673f;
+  width:75%;
+  padding-top: 15px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  color: white;
+}
+.home-btns{
+  position: relative;
+  top: 63%;
+  left: 42.5%;
+  }
+.btn-success{
+  background-color: #2E852E;
+  border-color: #2E852E;
+}
+

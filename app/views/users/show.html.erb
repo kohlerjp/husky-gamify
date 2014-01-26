@@ -7,8 +7,8 @@
 	<h2><%= pluralize(@user.points,'point') %></h2>
 	<% if @user.profile %>
 		<ul>
-			<% if @user.profile.age %>
-			<li>Age: <%=@user.profile.age %></li>
+			<% if @user.profile.yog %>
+			<li>Graduates: <%=@user.profile.yog %></li>
 			<% end %> 
 
 			<% if @user.profile.school %>
@@ -18,14 +18,13 @@
 			<% if @user.profile.power %>
 			<li>Super Power: <%=@user.profile.power %></li>
 			<% end %> 
+
+			<% if @user.profile.favsport %>
+			<li>Favorite Sport: <%=@user.profile.favsport %></li>
+			<% end %>
 		</ul>
 
-		<% if @user.profile.aboutme %>
-			<div class="container">
-				<h2>About Me</h2>
-				<p><%= @user.profile.aboutme %></p>
-			</div>
-		<% end %> 
+
 	<% end %>
 
 	<h2>Events</h2>

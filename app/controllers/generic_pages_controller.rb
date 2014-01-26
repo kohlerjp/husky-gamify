@@ -9,4 +9,8 @@ class GenericPagesController < ApplicationController
 
   def faq
   end
+
+  def logged_in_home
+  	
+  end
 end

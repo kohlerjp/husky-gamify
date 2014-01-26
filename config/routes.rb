@@ -22,6 +22,7 @@ HuskyGamify::Application.routes.draw do
   match '/faq', to:'generic_pages#faq', via:'get'
   match '/create_profile', to:'user_profile#new', via:'get'
   match '/events', to: 'events#index', via:'get'
+  match '/feed', to:'generic_pages#logged_in_home', via:'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
