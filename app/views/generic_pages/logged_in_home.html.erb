@@ -1,0 +1,48 @@
+<style type="text/css">
+body{
+}
+
+</style>
+<div class="container-fluid">
+	<div class="jumbotron">
+
+	</div>
+
+<div class="row">
+  <div class="col-md-4 profile-column">
+  	<div class="in-profile">
+  		<span class="heading">my <strong>in</strong> profile </span>
+  		<ul>
+  			<% if current_user.profile %>
+  				<% if current_user.profile.school %>
+		  			<li><%= current_user.profile.school %></li>
+		  		<% end %>
+		  		<li><%= pluralize(current_user.points,'mark') %></li>
+		  		<li>Class of <%= current_user.profile.yog %></li>
+  			<% end %>
+
+  		</ul>
+  	</div>
+  	<div class="just-in in-profile">
+  		<span class="heading">just in </span>
+  		<li>Jack Donalds is attending Frozen Fenway</li>
+  		<li>John Smith is attending The Husky Hunt</li>
+  	</div>
+  </div>
+  <div class="col-md-4 feed">
+  	Feed
+  </div>
+  <div class="col-md-4 popular">
+  	<div class="pop-events">
+  		<p>Will the huskies take one more game during their all time best season?
+  		<strong>Frozen Fenway</strong> </p>
+
+  		<p>
+  			Watch the Huskies take on Boston University during the first basketball game 
+  			of the new year. <strong>NEU vs BU Basketball</strong>
+  		</p>
+  	</div>
+  </div>
+</div>
+
+</div>
